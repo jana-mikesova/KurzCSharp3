@@ -37,5 +37,7 @@ for (int i = 0; i < thrownValuesExtra.Length; i++)
 }
 Console.WriteLine(thrownValuesExtraString);
 
+
 int scoreExtra = greedExtra.CountScoreExtra(thrownValuesExtra);
 Console.WriteLine("Skóre: " + scoreExtra);
+
