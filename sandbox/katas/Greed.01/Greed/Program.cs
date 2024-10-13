@@ -3,10 +3,17 @@
 // zakladni verze skorovani, hazi se vzdy peti kostkami
 Console.WriteLine("Základní verze");
 
-Greed greed = new Greed();
+/*
+Tento typ deklaracie nie je chyba, ale obecne sa pouziva klucove slovo 'var' pre lokalne premenne. Hovori sa im implicitne-typovane premenne.
+V podstate nechavas kompilator, aby si odvodil typ premennej z toho, co das na pravu stranu za =.
+V tomto pripade do greed priradzujes novy objekt typu Greed, takze z toho vie, ze greed bude tohto typu a netreba to pisat explicitne.
+Viac informacii tu: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/declarations#implicitly-typed-local-variables
+Na ostatnych miestach som ti to uz neopravovala, iba na tomto, aby som ukazala pouzitie.
+*/
+var greed = new Greed();
 
-int numberOfGreeds = 5;
-int[] thrownValues = new int[numberOfGreeds];
+// numberOfGreeds uz inde nepouzivas, tak by som to nedavala do premennej, ale rovno do inicializacie pola
+int[] thrownValues = new int[5];
 string thrownValuesString = "Hozeno: ";
 
 for (int i = 0; i < thrownValues.Length; i++)
